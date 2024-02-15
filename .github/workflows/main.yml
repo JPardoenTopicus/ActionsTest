@@ -16,6 +16,9 @@ jobs:
         - name: Install dependencies
           run: yarn install
 
+        - name: Install necessary dependencies for Chromium
+          run: sudo apt-get install -y libnss3
+
         - name: Setup Chrome
           uses: browser-actions/setup-chrome@v1
 
