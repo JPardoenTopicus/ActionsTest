@@ -5,12 +5,12 @@ on: [push, pull_request]
 jobs:
   build:
       runs-on: ubuntu-latest
-      container: ubuntu:18.04
+      container: node:14.16
       steps:
         - uses: actions/checkout@v4
         - uses: actions/setup-node@v4
           with:
-            node-version: 20
-            cache: 'yarn'
+            node-version: 14
+            cache: 'yarn.lock'
         - run: yarn install
         - run: yarn test
