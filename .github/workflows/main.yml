@@ -17,7 +17,11 @@ jobs:
           run: yarn install
 
         - name: Install necessary dependencies for Chromium
-          run: sudo apt-get install -y libnss3
+          run: |
+            wget https://launchpad.net/ubuntu/+archive/primary/+files/libnss3_3.53.1-1ubuntu0.4_amd64.deb
+            dpkg -x libnss3_3.53.1-1ubuntu0.4_amd64.deb $HOME/libnss3
+            export LD_LIBRARY_PATH=$HOME/libnss3/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+
 
         - name: Setup Chrome
           uses: browser-actions/setup-chrome@v1
