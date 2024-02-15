@@ -11,10 +11,10 @@
   },
   "private": true,
   "type": "module",
-  "jest": {
-    "testEnvironment": "node",
-    "setupFilesAfterEnv": [""]
-  },
+  "browserslist": [
+  "last 1 chrome version",
+  "last 1 firefox version",
+  "last 1 safari version"],
   "dependencies": {
     "@angular/animations": "^17.1.0",
     "@angular/common": "^17.1.0",
