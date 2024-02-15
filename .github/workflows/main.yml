@@ -7,9 +7,13 @@ jobs:
       runs-on: ubuntu-latest
       container: node:18
       steps:
-        - uses: actions/checkout@v4
-        - uses: actions/setup-node@v4
+        - name: Checkout repo
+          uses: actions/checkout@v4
+        - name: Set up Node.js 18
+          uses: actions/setup-node@v4
           with:
             node-version: 18
+        - name: Setup Chrome
+          uses: browser-actions/setup-chrome@v4
         - run: yarn install
         - run: yarn test
