@@ -1,5 +1,5 @@
 {
-  "name": "github-actions-test",
+  "name": "workspace1",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -15,10 +15,6 @@
     "last 1 chrome version",
     "last 1 firefox version",
     "last 1 safari version"
-  ],
-  "workspaces": [
-    "Workspace1",
-    "Workspace2"
   ],
   "dependencies": {
     "@angular/animations": "^17.1.0",
