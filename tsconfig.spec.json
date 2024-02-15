@@ -10,5 +10,8 @@
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
-  ]
+  ],
+  "types": ["jest"], // 1. Register Jest's tye defnition fils with the TS compiler
+  "esModuleInterop": true, // 2. Avoids anoying warnings [check TS option](https://www.typescriptlang.org/tsconfig#esModuleInterop)
+  "emitDecoratorMetadata": true // 3. Make Angular's dependency injection work with jest
 }
