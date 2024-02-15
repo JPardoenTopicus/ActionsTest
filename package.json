@@ -10,6 +10,7 @@
     "test:withoutWatch": "ng test --watch=false"
   },
   "private": true,
+  "type": "module",
   "dependencies": {
     "@angular/animations": "^17.1.0",
     "@angular/common": "^17.1.0",
